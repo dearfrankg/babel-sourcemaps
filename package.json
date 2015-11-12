@@ -14,7 +14,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "debug": "clear; webpack && node-debug main.js "
+    "debug": "clear; webpack && node-debug ./lib/main.js "
   },
   "keywords": [],
   "author": "",

@@ -19,7 +19,7 @@ module.exports = {
   ],
 
   output: {
-    path: path.resolve('.'),
+    path: path.resolve('./lib'),
     filename: '[name].js',
     sourceMapFilename: '[name].js.map'
   },
