@@ -18,14 +18,15 @@ module.exports = {
     './src/myapp.js'
   ],
 
-  target: 'node',
-
   output: {
-    path: path.resolve('./lib'),
-    filename: 'app.js'
+    path: path.resolve('.'),
+    filename: '[name].js',
+    sourceMapFilename: '[name].js.map'
   },
 
   externals: nodeModules,
+
+  devtool: 'source-map',
 
   module: {
     loaders: [
@@ -43,12 +44,10 @@ module.exports = {
     ]
   },
 
-  plugins: [
-    new webpack.IgnorePlugin(/\.(css|less)$/),
-    new webpack.BannerPlugin('require("source-map-support").install();',
-                             { raw: true, entryOnly: false })
-  ],
-
-  devtool: 'sourcemap'
+  // plugins: [
+  //   new webpack.IgnorePlugin(/\.(css|less)$/),
+  //   new webpack.BannerPlugin("\n\n" + 'require("source-map-support").install();' + "\n\n",
+  //                            { raw: true, entryOnly: false })
+  // ]
 
 };

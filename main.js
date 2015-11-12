@@ -1,4 +1,3 @@
-require("source-map-support").install();
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -59,12 +58,27 @@ require("source-map-support").install();
 /* 2 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
-	var foo = 55;
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	
-	console.log(foo);
+	debugger;
+	
+	console.log(55);
+	
+	exports.default = {
+	  bindEls: function bindEls(el1, el2) {
+	    el1.addEventListener('keyup', function () {
+	      return el2.value = el1.value;
+	    });
+	    el2.addEventListener('keyup', function () {
+	      return el1.value = el2.value;
+	    });
+	  }
+	};
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=main.js.map
